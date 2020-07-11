@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Mg.Company.Application.WebApi</name>
+    </assembly>
+    <members>
+        <!-- Badly formed XML comment ignored for member "M:Mg.Company.Application.WebApi.Controllers.EmployeesController.Get" -->
+        <member name="M:Mg.Company.Application.WebApi.Controllers.EmployeesController.Get(System.String)">
+            <summary>
+            Returns an employee by document number
+            </summary>
+            <param name="documentNumber">Document Number</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
