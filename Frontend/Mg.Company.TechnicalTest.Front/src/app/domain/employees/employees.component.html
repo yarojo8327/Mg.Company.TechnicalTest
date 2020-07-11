@@ -1,0 +1,50 @@
+
+<div clas="container" style="margin-top: 20px; margin-left: 40px; margin-right: 40px;">
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title">Employees</h5>
+        </div>
+        <div class="card-body">      
+            <form class="form-inline">
+                <div class="form-group mb-2">
+                  <label for="lblSearchEmployee" class="sr-only">Document Number</label>
+                  <input type="text"  class="form-control-plaintext" id="lblSearchEmployee" value="Document Number">
+                </div>
+                <div class="form-group mx-sm-3 mb-2">
+                  <label for="txtSearchEmployee" class="sr-only">Password</label>
+                  <input type="text" #document class="form-control" id="txtSearchEmployee">
+                </div>
+                <button type="button" (click)= "getEmployeesFilter(document.value);" class="btn btn-outline-primary">Search</button>
+              </form>
+        </div>
+        <div *ngIf="errorMessage" class="alert alert-dark" role="alert"  style="margin-top: 20px; margin-left: 40px; margin-right: 40px;">
+            {{errorMessage}}
+          </div>
+        <div *ngIf="errorMessage == ''" clas="container" style="margin-top: 20px; margin-left: 40px; margin-right: 40px;">
+            <table class="table">
+                <thead class="thead-dark">
+                <tr style="text-align: center;">                 
+                    <th scope="col">Document</th>
+                    <th scope="col">Names</th>
+                    <th scope="col">Surname</th>
+                    <th scope="col">Second Surname</th>                   
+                    <th scope="col">Contact Type</th>
+                    <th scope="col">Huor /Monthly Value</th>
+                    <th scope="col">Annual Salary</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let employee of employees" style="text-align: center;">                       
+                        <td>{{ employee.document }}</td>
+                        <td>{{ employee.firstName }}</td>
+                        <td>{{ employee.surname }}</td>
+                        <td>{{ employee.secondSurname }}</td>
+                        <td>{{ employee.contractTypeDescription }}</td>
+                        <td>{{ employee.salaryValue | currency:'COP $':'symbol' }}</td> 
+                        <td>{{ employee.annualSalary | currency:'COP $':'symbol' }}</td>                       
+                    </tr>              
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
