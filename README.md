@@ -3,7 +3,7 @@ Proyecto Back / Front Net Core y Angular 9
 
 El proyecto backend esta desarrollado en .Net Core 3.1
 El proyecto compila de forma correcta y cuanta con migracion de base de datos y datos semilla
-para lo cual solo es necesario correr el comando 
+para lo cual solo es necesario correr un comando 
 
 Para iniciar el proyecto backend por favor siga las siguientes instrucciones
 
@@ -15,3 +15,12 @@ Para iniciar el proyecto backend por favor siga las siguientes instrucciones
 	 Update-Database -verbose
 
 - Ejecute el proyecto de forma local
+
+
+El proyecto Frontend esta desarrollado en Angular 9
+
+- Descarge la solucion del proyecto
+- Abra la solucion
+- Ejecute el comando npm install para descargar los node modules
+- ejecute el comando ng serve
+
